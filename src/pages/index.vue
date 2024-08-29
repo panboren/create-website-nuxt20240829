@@ -10,6 +10,13 @@
      <div>
        <NuxtLink to="/user-admin/111">进入user-admin页面</NuxtLink>
      </div>
+    <div>
+      <NuxtLink to="/edit">进入edit页</NuxtLink>
+    </div>
+    <div>
+      <NuxtLink to="/edit2">进入edit2页</NuxtLink>
+    </div>
+    <el-input v-model="inputValue" placeholder="placeholder"></el-input>
     <el-row class="mb-4">
       <el-button @click="getData">Default</el-button>
       <el-button type="primary">Primary</el-button>
@@ -26,6 +33,7 @@
 // const foo = useFoo()
 import {useApi} from '../composables/api.ts'
 const {homeApi} = useApi()
+let inputValue = ref('')
 let index = 1
 const getData = async ()=>{
   index ++
