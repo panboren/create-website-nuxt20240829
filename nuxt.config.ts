@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     //   }
     // }
   },
-  css: ['normalize.css'],
+  css: ['normalize.css','element-plus/dist/index.css'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -28,6 +28,9 @@ export default defineNuxtConfig({
           additionalData: '@import "@/assets/styles/default.scss";'
         }
       }
+    },
+    vueJsx: {
+      mergeProps: true
     }
   }
   // elementPlus: { /** Options */ }
